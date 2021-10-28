@@ -1,11 +1,8 @@
-export INSTALL_ZSH=true
+# Install Oh My ZSH
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Install & Configure Zsh
-if [ "$INSTALL_ZSH" = "true" ]
-then
-    sudo apt-get install -y \
-    zsh
+# Set ZSH as the default shell
+chsh -s /usr/bin/zsh $(whoami)
 
-    cp -f ~/dotfiles/.zshrc ~/.zshrc
-    wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-fi
+# Install GitHub CLI
+brew install gh
