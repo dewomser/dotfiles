@@ -6,3 +6,7 @@ chsh -s /usr/bin/zsh $(whoami)
 
 # Install GitHub CLI
 brew install gh
+
+if [[ -n "${HOME}/.zshrc" ]]; then
+  rm "${HOME}/.zshrc"
+fi
