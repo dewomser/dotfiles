@@ -13,3 +13,5 @@ chsh -s /usr/bin/zsh $(whoami)
 
 # Install GitHub CLI
 brew install gh
+
+echo "\n$(cat .zshrc)" >> ~/.zshrc
